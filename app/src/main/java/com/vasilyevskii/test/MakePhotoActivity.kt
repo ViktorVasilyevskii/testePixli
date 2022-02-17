@@ -1,7 +1,9 @@
 package com.vasilyevskii.test
 
 import android.Manifest
+import android.content.Context
 import android.content.DialogInterface
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
@@ -11,21 +13,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import android.net.Uri
 import android.util.Log
 import android.view.View
 import android.view.Window
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.camera.core.*
 
 import androidx.camera.view.PreviewView
-import java.io.File
 
 
 class MakePhotoActivity : AppCompatActivity(){
 
     private val PERMISSION_REQUEST_CAMERA = 83854
-    private val nameFileImg = "filename.jpg"
 
     private var imageCapture: ImageCapture? = null
 
@@ -131,20 +131,16 @@ class MakePhotoActivity : AppCompatActivity(){
 
     private fun takePhoto(){
         val imageCapture = imageCapture ?: return
-        val photoFile = File(filesDir, nameFileImg)
-
 
         val outputOption = ImageCapture
             .OutputFileOptions
-            .Builder(photoFile)
+            .Builder(App().pathImage)
             .build()
 
         imageCapture.takePicture(
             outputOption, ContextCompat.getMainExecutor(this),
             object :ImageCapture.OnImageSavedCallback{
                 override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
-                    val savedUri = Uri.fromFile(photoFile)
-                    Log.d("takePhoto", "save: $savedUri")
                     alertDialogRequestSendPhoto()
                 }
 
@@ -166,6 +162,15 @@ class MakePhotoActivity : AppCompatActivity(){
         alertRequestSendPhoto.setView(view)
         alertRequestSendPhoto.setCancelable(false)
 
+        view.findViewById<TextView>(R.id.text_alert_send_name_photo).apply {
+            this.text = App().nameFile
+
+            setOnClickListener {
+                val intent = Intent(view.context, LoadPhoto::class.java)
+                view.context.startActivity(intent)
+            }
+        }
+
         view.findViewById<Button>(R.id.button_alert_reshoot).setOnClickListener {
             onRestart()
             startCamera()
@@ -173,6 +178,10 @@ class MakePhotoActivity : AppCompatActivity(){
 
         view.findViewById<Button>(R.id.button_alert_no).setOnClickListener {
             onRestart()
+        }
+
+        view.findViewById<Button>(R.id.button_alert_yes).setOnClickListener {
+
         }
 
 
