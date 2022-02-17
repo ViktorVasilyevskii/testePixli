@@ -1,21 +1,8 @@
 package com.vasilyevskii.test.api.model
 
-class DataDTO{
-    var id: Int
-    set(valueId) {
-        id = valueId
-    }
-    get() {
-        return id
-    }
+data class DataDTO(
+    val id: Int,
+    val target: String
+)
 
 
-    var target: String
-    set(valueTarget) {
-        target = valueTarget
-    }
-    get() {
-        return target
-    }
-
-}

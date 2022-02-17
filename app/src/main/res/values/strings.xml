@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Test</string>
+
+    <string name="text_title_edittext_target">Test</string>
+    <string name="text_title_response">Response</string>
+    <string name="text_title_edit_alert_name">Имя</string>
+    <string name="text_title_edit_alert_surname">Фамилия</string>
+    <string name="text_title_edit_alert_patronymic">Отчество</string>
+    <string name="text_title_edit_alert_photo">Фото</string>
+
+    <string name="text_button_take_photo">Take a photo</string>
+    <string name="text_button_alert_no">Нет</string>
+    <string name="text_button_alert_yes">Да</string>
+    <string name="text_title_edit_alert_reshoot">Переснять</string>
+
+
+
+    <string name="text_request_permission_camera">Приложение запрашивает разрешение на доступ к камере</string>
 </resources>
