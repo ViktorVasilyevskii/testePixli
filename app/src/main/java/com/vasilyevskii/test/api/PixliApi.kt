@@ -1,16 +1,21 @@
 package com.vasilyevskii.test.api
 
 import com.vasilyevskii.test.api.model.DataDTO
-import com.vasilyevskii.test.api.model.ImageDTO
 import io.reactivex.Single
-import retrofit2.http.GET
-import retrofit2.http.POST
+import okhttp3.MultipartBody
+import okhttp3.Request
+import okhttp3.RequestBody
+import okhttp3.ResponseBody
+import retrofit2.http.*
 
 interface PixliApi {
 
     @GET("/get.php")
-    fun getDataList(): Single<MutableList<DataDTO>>
+    fun getDataList(@Query("get_bodyParts") get_bodyParts: Int): Single<MutableList<DataDTO>>
 
     @POST("/send.php")
-    fun uploadImage(): Single<MutableList<ImageDTO>>
+    fun uploadImage(@Query("send_data") send_data: Int,
+                    @Part id: Int,
+                    @Part image: MultipartBody.Part,
+                    @Part array: Array<String>): Single<ResponseBody>
 }

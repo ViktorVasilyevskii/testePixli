@@ -9,63 +9,74 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/text_title_edit_alert_name"/>
 
     <EditText
         android:id="@+id/edit_alert_send_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/text_title_edit_alert_surname"/>
 
     <EditText
         android:id="@+id/edit_alert_send_surname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/text_title_edit_alert_patronymic"/>
 
     <EditText
         android:id="@+id/edit_alert_send_patronymic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/text_title_edit_alert_photo"/>
 
     <TextView
         android:id="@+id/text_alert_send_name_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         />
 
     <Button
         android:id="@+id/button_alert_no"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/text_button_alert_no"/>
 
     <Button
         android:id="@+id/button_alert_reshoot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/text_title_edit_alert_reshoot"/>
 
     <Button
         android:id="@+id/button_alert_yes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/text_button_alert_yes"/>
 
 

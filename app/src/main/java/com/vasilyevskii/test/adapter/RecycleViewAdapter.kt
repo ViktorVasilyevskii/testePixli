@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.vasilyevskii.test.App
-import com.vasilyevskii.test.MakePhotoActivity
+import com.vasilyevskii.test.photo.MakePhotoActivity
 import com.vasilyevskii.test.R
 import com.vasilyevskii.test.api.model.DataDTO
 

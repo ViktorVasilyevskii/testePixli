@@ -23,8 +23,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MakePhotoActivity"/>
-        <activity android:name=".LoadPhoto"/>
+        <activity android:name=".photo.MakePhotoActivity"/>
+        <activity android:name=".photo.LoadPhoto"/>
     </application>
 
 </manifest>

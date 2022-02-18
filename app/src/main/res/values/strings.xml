@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Test</string>
 
-    <string name="text_title_edittext_target">Test</string>
+    <string name="text_title_edittext_target">Target</string>
     <string name="text_title_response">Response</string>
     <string name="text_title_edit_alert_name">Имя</string>
     <string name="text_title_edit_alert_surname">Фамилия</string>
@@ -12,6 +12,11 @@
     <string name="text_button_alert_no">Нет</string>
     <string name="text_button_alert_yes">Да</string>
     <string name="text_title_edit_alert_reshoot">Переснять</string>
+
+    <string name="text_snackbar_edittext_empty">Заполните пустые поля</string>
+    <string name="text_snackbar_send_data_server">Данные отправлены на сервер</string>
+
+    <string name="text_snackbar_no_send_data_server">Данные не отправлены на сервер</string>
 
 
 

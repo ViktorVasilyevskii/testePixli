@@ -16,6 +16,8 @@ import io.reactivex.schedulers.Schedulers
 class MainActivity : AppCompatActivity() {
 
 
+    private val get_bodyParts = 10
+
     private val pixliService: PixliService
         get() = (application as App).pixliService
 
@@ -43,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadData(){
-        compositeDisposable.add(pixliService.getPixliApi().getDataList()
+        compositeDisposable.add(pixliService.getPixliApi().getDataList(get_bodyParts)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
